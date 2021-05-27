@@ -32,5 +32,16 @@ namespace QuizMahasiswa.Properties {
                 return ((string)(this["QUIZMAHASISWAConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-2F1SV60V\\MSSQLSERVER01;Initial Catalog=QUIZMAHASISWA;Integrate" +
+            "d Security=True")]
+        public string QUIZMAHASISWAConnectionString1 {
+            get {
+                return ((string)(this["QUIZMAHASISWAConnectionString1"]));
+            }
+        }
     }
 }

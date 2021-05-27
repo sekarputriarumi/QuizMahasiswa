@@ -33,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\..\OneDrive\Documents\POLMAN ASTRA\S2\PRG2\AGIT\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\OneDrive\Documents\POLMAN ASTRA\S2\PRG2\AGIT\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -47,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtama.Designer.cs">
+      <DependentUpon>FormUtama.cs</DependentUpon>
+    </Compile>
     <Compile Include="MasterBarang025.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +74,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuizMahasiswa.dbml</DependentUpon>
     </Compile>
+    <Compile Include="QUIZMAHASISWADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUIZMAHASISWADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportBarang027.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportBarang027.Designer.cs">
+      <DependentUpon>ReportBarang027.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormUtama.resx">
+      <DependentUpon>FormUtama.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MasterBarang025.resx">
       <DependentUpon>MasterBarang025.cs</DependentUpon>
     </EmbeddedResource>
@@ -72,6 +100,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportBarang027.resx">
+      <DependentUpon>ReportBarang027.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,6 +119,17 @@
     </None>
     <None Include="QuizMahasiswa.dbml.layout">
       <DependentUpon>QuizMahasiswa.dbml</DependentUpon>
+    </None>
+    <None Include="QUIZMAHASISWADataSet.xsc">
+      <DependentUpon>QUIZMAHASISWADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QUIZMAHASISWADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUIZMAHASISWADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUIZMAHASISWADataSet.xss">
+      <DependentUpon>QUIZMAHASISWADataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

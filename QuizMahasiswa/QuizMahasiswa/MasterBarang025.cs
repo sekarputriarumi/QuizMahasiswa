@@ -22,6 +22,7 @@ namespace QuizMahasiswa
 
         private void MasterBarang025_Load(object sender, EventArgs e)
         {
+            txtID.Enabled = false;
             con.Open();
             SqlDataAdapter sda = new SqlDataAdapter("select isnull(max (cast (id_barang as int)), 0) +1 from tbl_barang", con);
             DataTable dt = new DataTable();
