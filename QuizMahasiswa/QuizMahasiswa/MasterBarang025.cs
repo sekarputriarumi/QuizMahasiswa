@@ -13,7 +13,6 @@ namespace QuizMahasiswa
 {
     public partial class MasterBarang025 : Form
     {
-        SqlConnection con = new SqlConnection(@"Integrated Security=true; Data Source=LAPTOP-2F1SV60V\MSSQLSERVER01; Initial Catalog=QUIZMAHASISWA");
         public MasterBarang025()
         {
             InitializeComponent();
@@ -23,14 +22,24 @@ namespace QuizMahasiswa
         private void MasterBarang025_Load(object sender, EventArgs e)
         {
             txtID.Enabled = false;
+            //con.Open();
+            //SqlDataAdapter sda = new SqlDataAdapter("select isnull(max (cast (id_barang as int)), 0) +1 from tbl_barang", con);
+            //DataTable dt = new DataTable();
+            //sda.Fill(dt);
+            //txtID.Text = dt.Rows[0][0].ToString();
+            id_otomatis();
+            LoadData();
+        }
+
+        void id_otomatis()
+        {
+            SqlConnection con = new SqlConnection(@"Integrated Security=true; Data Source=LAPTOP-2F1SV60V\MSSQLSERVER01; Initial Catalog=QUIZMAHASISWA");
             con.Open();
             SqlDataAdapter sda = new SqlDataAdapter("select isnull(max (cast (id_barang as int)), 0) +1 from tbl_barang", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             txtID.Text = dt.Rows[0][0].ToString();
-            LoadData();
         }
-
         void LoadData()
         {
             var st = from tb in db.tbl_barangs select tb;
@@ -56,11 +65,36 @@ namespace QuizMahasiswa
             db.tbl_barangs.InsertOnSubmit(data);
             db.SubmitChanges();
             MessageBox.Show("Save Successfully");
+            id_otomatis();
             txtNama.Clear();
             txtHarga.Clear();
             txtStok.Clear();
             txtSupplier.Clear();
             LoadData();
+        }
+
+        private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtHarga_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtStok_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

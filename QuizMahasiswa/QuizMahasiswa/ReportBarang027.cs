@@ -70,6 +70,7 @@ namespace QuizMahasiswa
                     stream.Close();
                 }
             }
+            MessageBox.Show("Export data ke pdf berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void exportgridtoexcel(DataGridView dgw, string filename)
@@ -103,8 +104,8 @@ namespace QuizMahasiswa
                 workbook.SaveAs(saveFileDialogExcel.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
                                 Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             }
-
             app.Quit();
+            MessageBox.Show("Export data ke excel berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void ExportPDF_Click(object sender, EventArgs e)
