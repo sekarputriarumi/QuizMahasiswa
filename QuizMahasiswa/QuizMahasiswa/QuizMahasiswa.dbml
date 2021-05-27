@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QUIZMAHASISWA" Class="QuizMahasiswaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=QUIZMAHASISWA;Integrated Security=True" SettingsObjectName="QuizMahasiswa.Properties.Settings" SettingsPropertyName="QUIZMAHASISWAConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-2F1SV60V\MSSQLSERVER01;Initial Catalog=QUIZMAHASISWA;Integrated Security=True" SettingsObjectName="QuizMahasiswa.Properties.Settings" SettingsPropertyName="QUIZMAHASISWAConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tbl_barang" Member="tbl_barangs">
     <Type Name="tbl_barang">
       <Column Name="id_barang" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

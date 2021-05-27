@@ -13,7 +13,7 @@ namespace QuizMahasiswa
 {
     public partial class MasterBarang025 : Form
     {
-        SqlConnection con = new SqlConnection("integrated security=true; data source=.;initial catalog=QUIZMAHASISWA");
+        SqlConnection con = new SqlConnection(@"Integrated Security=true; Data Source=LAPTOP-2F1SV60V\MSSQLSERVER01; Initial Catalog=QUIZMAHASISWA");
         public MasterBarang025()
         {
             InitializeComponent();

@@ -36,7 +36,7 @@ namespace QuizMahasiswa
     #endregion
 		
 		public QuizMahasiswaDataContext() : 
-				base(global::QuizMahasiswa.Properties.Settings.Default.QUIZMAHASISWAConnectionString, mappingSource)
+				base(global::QuizMahasiswa.Properties.Settings.Default.QUIZMAHASISWAConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
